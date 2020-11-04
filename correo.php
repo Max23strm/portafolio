@@ -1,10 +1,10 @@
 <?php
 
 $destino="maximiliano.ovejak@gmail.com";
-$nombre=$_POST["Name"];
-$asunto=$_POST["Asunto"];
-$correo=$_POST["Email"];
-$mensaje=$_POST["Mensaje"];
+$nombre=$_POST["name"];
+$asunto=$_POST["asunto"];
+$correo=$_POST["email"];
+$mensaje=$_POST["mensaje"];
 $contenido= "Nombre:".$nombre."\nCorreo:".$correo."\nAsunto:".$asunto."\Mensaje".$mensaje; 
 mail($destino, "Contacto",$contenido);
 header("Location:enviado.html");
