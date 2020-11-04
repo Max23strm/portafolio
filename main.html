@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,100 +10,76 @@
 </head>
 
 <body>
-
+    
     <img src="img/fondo-rearmado chico claro.jpg" class="fondito" id="dorape" alt="">
     <img src="img/fondo-rearmado.jpg" class="fondito" id="largo" alt="">
+            <div id="hero">
+                <h1>
+                <p>/</p>Let's create together
+                </h1><br>
+                <h2>Creemos juntos </h2>
+            </div>
 
-    <header id="hero">
-        <h1>
-            <p>/</p>Let's create together
-        </h1><br>
-        <h2>Creemos juntos </h2>
-    </header>
 
-    <a href=""><button>Contacto</button></a>
+    <button id="botonazo">Contacto</button>
+    <section id="Contacto-escondido">
+        <div id="info">
+            <button id="cerranding1">X</button>
+            <div class="parte1">
+                <p class="cosa">Correo electrónico:</p>
+                <p class="coso">maximiliano.ovejak@gmail.com</p>
+            </div>
+            <div class="parte2">
+                <p class="cosa">Número de telefono:</p>
+                <p class="coso">+52 984 132 3859</p>
+        </div>
+        </div>
+        <button id="cerranding">X</button>
+        <form method="POST" action="correo.php">
+            <input type="text" placeholder="Nombre/Name" name="Name" required>
+            <input type="text" placeholder="Email" name="Email"required>
+            <input type="text" placeholder="Asunto/Subject" name="Asunto">
+            <textarea name="Mensaje"  cols="30" rows="10" placeholder="Mensaje/Message"></textarea>
+            <input type="submit" id="boton-forma">
+        </form>
+    </section>
 
     <section id="menu">
         <ul>
             <li class="menu"><a href="#landing"> Landing Pages</a></li>
             <li class="menu"><a href="#page">Web Pages</a></li>
             <li class="menu"><a href="#lenguajes">Languages</a></li>
+
         </ul>
     </section>
 
 
 
     <div id="mostrador">
-        <div class="close">
-            <svg fill='#151515' stroke='#b08d57' stroke-width='9' stroke-dashoffset='196' stroke-dasharray='200 20'
-                stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-                <line x1="15" y1="15" x2="85" y2="85" />
-                <line x1="85" y1="15" x2="15" y2="85" /></svg>
-            <p>Close</p>
-        </div>
-        <div class="close">
-            <svg fill='#151515' stroke='#b08d57' stroke-width='9' stroke-dashoffset='196' stroke-dasharray='200 20'
-                stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-                <line x1="15" y1="15" x2="85" y2="85" />
-                <line x1="85" y1="15" x2="15" y2="85" /></svg>
-            <p>Close</p>
-        </div>
-        <div class="close">
-            <svg fill='#151515' stroke='#b08d57' stroke-width='9' stroke-dashoffset='196' stroke-dasharray='200 20'
-                stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-                <line x1="15" y1="15" x2="85" y2="85" />
-                <line x1="85" y1="15" x2="15" y2="85" /></svg>
-            <p>Close</p>
-        </div>
-        <div class="close">
-            <svg fill='#151515' stroke='#b08d57' stroke-width='9' stroke-dashoffset='196' stroke-dasharray='200 20'
-                stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-                <line x1="15" y1="15" x2="85" y2="85" />
-                <line x1="85" y1="15" x2="15" y2="85" /></svg>
-            <p>Close</p>
-        </div>
-        <div class="close">
-            <svg fill='#151515' stroke='#b08d57' stroke-width='9' stroke-dashoffset='196' stroke-dasharray='200 20'
-                stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-                <line x1="15" y1="15" x2="85" y2="85" />
-                <line x1="85" y1="15" x2="15" y2="85" /></svg>
-            <p>Close</p>
-        </div>
-        <div class="close">
-            <svg fill='#151515' stroke='#b08d57' stroke-width='9' stroke-dashoffset='196' stroke-dasharray='200 20'
-                stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-                <line x1="15" y1="15" x2="85" y2="85" />
-                <line x1="85" y1="15" x2="15" y2="85" /></svg>
-            <p>Close</p>
-        </div>
-        <div class="close">
-            <svg fill='#151515' stroke='#b08d57' stroke-width='9' stroke-dashoffset='196' stroke-dasharray='200 20'
-                stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-                <line x1="15" y1="15" x2="85" y2="85" />
-                <line x1="85" y1="15" x2="15" y2="85" /></svg>
-            <p>Close</p>
+        <div class="close"id="close">
+            <button>X</button>
         </div>
         <img class="mostrado land" id="ejemplo1" src="img/ejemplos/Landing.jpg" alt="">
         <img class="mostrado land" id="ejemplo2" src="img/ejemplos/Landing Dentist.jpg" alt="">
-        <img class="mostrado pagina" src="img/ejemplos/Somia Web.jpg" alt="">
-        <img class="mostrado pagina celu" src="img/ejemplos/Somia Iphone.jpg" alt="">
-        <img class="mostrado pagina" src="img/ejemplos/Home.jpg" alt="">
-        <img class="mostrado pagina celu" src="img/ejemplos/Home Iphone.jpg" alt="">
-        <img class="mostrado pagina" src="img/ejemplos/Web 1920 – 1.jpg" alt="">
+        <img class="mostrado pagina"  id="ejemplo3"  src="img/ejemplos/Somia Web.jpg" alt="">
+        <img class="mostrado pagina celu"  id="ejemplo4" src="img/ejemplos/Somia Iphone.jpg" alt="">
+        <img class="mostrado pagina" id="ejemplo5"  src="img/ejemplos/Home.jpg" alt="">
+        <img class="mostrado pagina celu" id="ejemplo6"  src="img/ejemplos/Home Iphone.jpg" alt="">
+        <img class="mostrado pagina" id="ejemplo7"  src="img/ejemplos/Web 1920 – 1.jpg" alt="">
     </div>
 
 
     <section id="landing" class="show landing" style="display:none" ;>
-        <img class="ejemplo" id="ejemplo1" src="img/ejemplos/Landing.jpg" alt="">
-        <img class="ejemplo" id="ejemplo2" src="img/ejemplos/Landing Dentist.jpg" alt="">
+        <a href="#close"><img class="ejemplo" id="ejemplo1" src="img/ejemplos/Landing.jpg" alt=""></a>
+        <a href="#close"><img class="ejemplo" id="ejemplo2" src="img/ejemplos/Landing Dentist.jpg" alt=""></a>
     </section>
 
     <section id="page" class="show page" style="display:none">
-        <img class="stand" src="img/ejemplos/Somia Web.jpg" alt="">
-        <img class="stand phone" src="img/ejemplos/Somia Iphone.jpg" alt="">
-        <img class="stand" src="img/ejemplos/Home.jpg" alt="">
-        <img class="stand phone" src="img/ejemplos/Home Iphone.jpg" alt="">
-        <img class="stand" src="img/ejemplos/Web 1920 – 1.jpg" alt="">
+        <a href="#close"><img class="stand" src="img/ejemplos/Somia Web.jpg" alt=""></a>
+        <a href="#close"><img class="stand phone" src="img/ejemplos/Somia Iphone.jpg" alt=""></a>
+        <a href="#close"><img class="stand" src="img/ejemplos/Home.jpg" alt=""></a>
+        <a href="#close"><img class="stand phone" src="img/ejemplos/Home Iphone.jpg" alt=""></a>
+        <a href="#close"><img class="stand" src="img/ejemplos/Web 1920 – 1.jpg" alt=""></a>
     </section>
 
 
@@ -116,6 +92,9 @@
 
     </section>
     <script src="js/main.js"></script>
+    <?php
+        include correo.php
+    ?>
 </body>
 
 </html>

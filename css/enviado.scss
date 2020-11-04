@@ -1,0 +1,115 @@
+$primario: #B08D57;
+$blanco: #FFF;
+$oscuro:#212121;
+$borde:#333333;
+$oscuro2:#090909;
+
+$panta: 400px;
+$escritorio: 850px;
+
+@mixin escritorio {
+    @media (min-width: #{$escritorio}) {
+        @content;
+    }
+}
+
+@mixin panta {
+    @media (min-width: #{$panta}) {
+        @content;
+    }
+}
+
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+
+}
+
+body {
+    position: relative;
+    background-color: $oscuro;
+    max-width: 1920px;
+    margin: 0 auto;
+
+
+    section {
+        width: 100vw;
+    }
+
+    #enviado {
+
+        border: 2px solid $primario;
+        margin: 50px auto 10px auto;
+        display: block;
+        max-width: 1920px;
+        height: fit-content;
+        width: 99vw;
+        border-radius: 20px;
+        background: url("../img/patron-dark.svg") no-repeat;
+        background-size: cover;
+
+        h1 {
+            span {
+                color: $primario;
+            }
+
+            margin-left: 30px;
+            padding-top: 20px;
+            letter-spacing: 2px;
+            display:inline-block;
+            font-size: 20px;
+            color:$blanco;
+
+            @include panta {
+                font-size: 24px;
+            }
+
+            @include escritorio {
+                font-size: 36px
+            }
+        }
+
+        h2 {
+            display: inline-block;
+            font-weight: lighter;
+            color: $primario;
+            margin-left: 30px;
+            padding-bottom: 20px;
+            font-size: 17px;
+
+            @include panta {
+                font-size: 21px;
+            }
+
+            @include escritorio {
+                font-size: 33px
+            }
+        }
+    }
+
+}
+
+a {
+    text-decoration: none;
+
+    button {
+        display: block;
+        border: $primario 1px solid;
+        background-color: $oscuro;
+        color: $primario;
+        border-radius: 45px;
+        width: 204px;
+        height: 61px;
+        margin: 60px auto 0;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: url("../img/patron-dark2.svg");
+        background-size: cover;
+    }
+
+}

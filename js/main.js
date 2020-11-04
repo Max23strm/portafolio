@@ -6,15 +6,27 @@ var lenguajes= document.getElementById("lenguajes");
 var stand =document.getElementsByClassName("stand");
 var phone =document.getElementsByClassName("phone");
 var ejemplo= document.getElementsByClassName ("ejemplo")
-var cerrar= document.getElementsByClassName("close")
+var cerrar= document.getElementById("close")
 var fondo= document.getElementById("fondo-imagen")
 var x=window.matchMedia("(orientation:landscape)")
 var mostrador= document.getElementById("mostrador");
 var mostrado= document.getElementsByClassName("mostrado");
-
-
+var contacto=document.getElementById("Contacto-escondido");
+var cerrarContacto=document.getElementById("cerranding");
+var botonazo=document.getElementById("botonazo")
+var cerrarContacto2=document.getElementById("cerranding1")
 //------------------script
 
+botonazo.onclick=function(){
+contacto.style.display= "grid";
+
+}
+cerrarContacto.onclick=function(){
+    contacto.style.display="none";
+}
+cerrarContacto2.onclick=function(){
+    contacto.style.display="none";
+}
 menu[0].onclick=function(){
     if (landing.style.display 
         == "none") {
@@ -83,14 +95,10 @@ ejemplo[0].onclick= function() {
         mostrado[5].style.display="none"
         mostrado[6].style.display="none"
         mostrador.style.display="block"
-        cerrar[0].style.display="block"
+        cerrar.style.display="block"
     }
         
-cerrar[0].onclick=function(){
-    mostrado[0].style.display="none"
-    mostrador.style.display="none"
-    cerrar[0].style.display="none"
-}
+
 
 
 ejemplo[1].onclick= function() {
@@ -103,13 +111,36 @@ ejemplo[1].onclick= function() {
         mostrado[5].style.display="none"
         mostrado[6].style.display="none"
         mostrador.style.display="block"
-        cerrar[1].style.display="block"
+        cerrar.style.display="block"
     }
 
-cerrar[1].onclick=function(){
-    mostrado[1].style.display="none"
+
+
+
+cerrar.onclick=function(){
     mostrador.style.display="none"
-    cerrar[1].style.display="none"
+    cerrar.style.display="none"
+    if(mostrado[0].style.display==block){
+        mostrado[0].style.display="none"
+    }
+    if(mostrado[1].style.display==block){
+        mostrado[1].style.display="none"
+    }else if(mostrado[2].style.display==block){
+        mostrado[2].style.display="none"
+
+    }else if(mostrado[3].style.display==block){
+        mostrado[3].style.display="none"
+
+    }else if(mostrado[4].style.display==block){
+        mostrado[4].style.display="none"
+
+    }else if(mostrado[5].style.display==block){
+        mostrado[5].style.display="none"
+
+    }else if(mostrado[6].style.display==block){
+        mostrado[6].style.display="none"
+
+    }
 }
 
 //-------------------WEBPAGES----------------------//
@@ -124,13 +155,9 @@ stand[0].onclick= function() {
         mostrado[5].style.display="none"
         mostrado[6].style.display="none"
         mostrador.style.display="block"
-        cerrar[2].style.display="block"
+        cerrar.style.display="block"
     }
-cerrar[2].onclick=function(){
-    mostrado[2].style.display="none"
-    mostrador.style.display="none"
-    cerrar[2].style.display="none"
-}
+
 
 stand[1].onclick= function() {
 
@@ -142,13 +169,8 @@ stand[1].onclick= function() {
         mostrado[5].style.display="none"
         mostrado[6].style.display="none"
         mostrador.style.display="block"
-        cerrar[3].style.display="block"
-    }
-cerrar[3].onclick=function(){
-    mostrado[3].style.display="none"
-    mostrador.style.display="none"
-    cerrar[3].style.display="none"
-}
+        cerrar.style.display="block"    }
+
 
 stand[2].onclick= function() {
 
@@ -160,13 +182,8 @@ stand[2].onclick= function() {
         mostrado[5].style.display="none"
         mostrado[6].style.display="none"
         mostrador.style.display="block"
-        cerrar[4].style.display="block"
-    }
-cerrar[4].onclick=function(){
-    mostrado[4].style.display="none"
-    mostrador.style.display="none"
-    cerrar[4].style.display="none"
-}
+        cerrar.style.display="block"    }
+
 
 stand[3].onclick= function() {
 
@@ -178,13 +195,8 @@ stand[3].onclick= function() {
         mostrado[5].style.display="block"
         mostrado[6].style.display="none"
         mostrador.style.display="block"
-        cerrar[5].style.display="block"
-    }
-cerrar[5].onclick=function(){
-    mostrado[5].style.display="none"
-    mostrador.style.display="none"
-    cerrar[5].style.display="none"
-}
+        cerrar.style.display="block"    }
+
 
 stand[4].onclick= function() {
 
@@ -196,13 +208,8 @@ stand[4].onclick= function() {
         mostrado[5].style.display="none"
         mostrado[6].style.display="block"
         mostrador.style.display="block"
-        cerrar[6].style.display="block"
-    }
-cerrar[6].onclick=function(){
-    mostrado[6].style.display="none"
-    mostrador.style.display="none"
-    cerrar[6].style.display="none"
-}
+        cerrar.style.display="block"    }
+
 
 //-----------------pantalla---------------
 var w= screen.width;
