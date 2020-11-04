@@ -7,6 +7,6 @@ $correo=$_POST["email"];
 $mensaje=$_POST["mensaje"];
 $contenido= "Nombre:".$nombre."\nCorreo:".$correo."\nAsunto:".$asunto."\Mensaje".$mensaje; 
 mail($destino, "Contacto",$contenido);
-header("Location:enviado.html");
+header("location.href:enviado.html");
 
 ?>
