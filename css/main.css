@@ -135,7 +135,7 @@
   * #hero {
     position: absolute;
     right: 5%;
-    top: 70%;
+    bottom: 27%;
     text-align: right;
     left: auto;
   }
@@ -272,6 +272,16 @@
   background-color: #212121;
 }
 
+@media (min-width: 850px) {
+  * .show {
+    width: 99.5%;
+    margin-left: auto;
+    position: absolute;
+    bottom: -75px;
+    z-index: 100;
+  }
+}
+
 * .show .ejemplo {
   width: auto;
   height: 100px;
@@ -280,7 +290,7 @@
   z-index: 10;
 }
 
-@media (min-width: 850px) {
+@media (orientation: landscape) and (min-width: 850px) {
   * .show .ejemplo {
     height: 200px;
   }
@@ -294,7 +304,7 @@
   z-index: 10;
 }
 
-@media (min-width: 850px) {
+@media (orientation: landscape) and (min-width: 850px) {
   * .show .stand {
     height: 200px;
   }
@@ -311,48 +321,45 @@
   }
 }
 
-@media (min-width: 850px) {
-  * .show {
-    width: 99.5%;
-    margin-left: auto;
-    position: absolute;
-    top: 90%;
-  }
-}
-
-* .lenguajes {
+.lenguajes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-* .lenguajes h3 {
+@media (min-width: 850px) {
+  .lenguajes {
+    bottom: 15px;
+  }
+}
+
+.lenguajes h3 {
   padding: 20px 10px;
 }
 
-* .lenguajes h3 a {
+.lenguajes h3 a {
   text-decoration: none;
   color: #FFF;
 }
 
-* .lenguajes h3 a:hover {
+.lenguajes h3 a:hover {
   color: #B08D57;
 }
 
-* #menu {
+#menu {
   display: block;
   margin-top: 60px;
   background-color: transparent !important;
 }
 
 @media (orientation: landscape) and (min-width: 850px) {
-  * #menu {
+  #menu {
     position: absolute;
-    top: 57%;
+    bottom: 20%;
   }
 }
 
-* #menu ul {
+#menu ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -365,12 +372,12 @@
 }
 
 @media (min-width: 850px) {
-  * #menu ul {
+  #menu ul {
     background-color: transparent !important;
   }
 }
 
-* #menu ul li {
+#menu ul li {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -380,36 +387,32 @@
 }
 
 @media (min-width: 850px) {
-  * #menu ul li {
+  #menu ul li {
     background-color: transparent !important;
   }
 }
 
-* #menu ul li a {
+#menu ul li a {
   list-style-type: none;
   color: #FFF;
   text-decoration: none;
 }
 
 @media (min-width: 850px) {
-  * #menu ul li a {
+  #menu ul li a {
     background-color: inherit !important;
   }
 }
 
-* #menu ul li:hover {
+#menu ul li:hover {
   color: #B08D57;
 }
 
-* #menu ul li:focus {
+#menu ul li:focus {
   color: #B08D57;
 }
 
-* #Contacto-escondido {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  max-height: 1000px;
+#Contacto-escondido {
   border: 2px solid #B08D57;
   border-radius: 10px;
   background-color: #212121;
@@ -418,21 +421,15 @@
   top: 2%;
   right: 5%;
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: 90vw;
 }
 
 @media (orientation: landscape) and (min-width: 850px) {
-  * #Contacto-escondido {
+  #Contacto-escondido {
     height: 70%;
-    width: 80%;
+    width: auto;
     -ms-grid-columns: 50% auto;
         grid-template-columns: 50% auto;
-    -webkit-column-gap: 0px;
-            column-gap: 0px;
     -webkit-animation: scale-in-tr 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
             animation: scale-in-tr 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
@@ -472,7 +469,7 @@
   }
 }
 
-* #Contacto-escondido #info {
+#Contacto-escondido #info {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -483,16 +480,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 10px 10px 0 0;
 }
 
 @media (orientation: landscape) and (min-width: 850px) {
-  * #Contacto-escondido #info {
+  #Contacto-escondido #info {
+    border-radius: 10px 0 0 10px;
     width: 300px;
-    padding-left: 30px;
+    padding-top: 40px;
   }
 }
 
-* #Contacto-escondido #info button {
+#Contacto-escondido #info button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -509,12 +508,12 @@
 }
 
 @media (orientation: landscape) and (min-width: 850px) {
-  * #Contacto-escondido #info button {
+  #Contacto-escondido #info button {
     display: none;
   }
 }
 
-* #Contacto-escondido #info .cosa {
+#Contacto-escondido #info .cosa {
   color: #c2c2c2;
   font-weight: lighter;
   padding-left: 30px;
@@ -522,36 +521,58 @@
 }
 
 @media (min-width: 400px) {
-  * #Contacto-escondido #info .cosa {
+  #Contacto-escondido #info .cosa {
     font-size: 1em;
   }
 }
 
 @media (orientation: landscape) and (min-width: 850px) {
-  * #Contacto-escondido #info .cosa {
+  #Contacto-escondido #info .cosa {
     padding: none;
+    padding-left: 30px;
   }
 }
 
-* #Contacto-escondido #info .coso {
+#Contacto-escondido #info .coso {
   color: #FFF;
   padding-left: 30px;
   font-size: .8em;
 }
 
 @media (min-width: 400px) {
-  * #Contacto-escondido #info .coso {
+  #Contacto-escondido #info .coso {
     font-size: 1em;
   }
 }
 
 @media (orientation: landscape) and (min-width: 850px) {
-  * #Contacto-escondido #info .coso {
+  #Contacto-escondido #info .coso {
     padding: none;
+    padding-left: 30px;
   }
 }
 
-* #Contacto-escondido form {
+#Contacto-escondido .social {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#Contacto-escondido .social a img {
+  width: 30px;
+}
+
+@media (orientation: landscape) and (min-width: 850px) {
+  #Contacto-escondido .social {
+    padding-top: 50px;
+  }
+}
+
+#Contacto-escondido form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,18 +587,24 @@
 }
 
 @media (orientation: landscape) and (min-width: 850px) {
-  * #Contacto-escondido form {
+  #Contacto-escondido form {
     width: 300px;
     max-width: 400px;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    padding-right: 0px;
-    margin: 0px 50px;
+    margin: 0px auto;
+    padding-right: 60px;
   }
 }
 
-* #Contacto-escondido form input {
+#Contacto-escondido form .red {
+  color: red;
+  font-style: italic;
+  font-size: 13px;
+}
+
+#Contacto-escondido form input {
   border-style: none;
   border-color: #B08D57;
   width: 100%;
@@ -588,21 +615,22 @@
   color: #FFF;
 }
 
-* #Contacto-escondido form #boton-forma {
+#Contacto-escondido form #boton-forma {
   padding: 5px;
   border: 1px solid #B08D57;
   border-radius: 30px;
   color: #B08D57;
   cursor: pointer;
   margin: 0px auto;
+  height: 50px;
 }
 
-* #Contacto-escondido form #boton-forma:hover {
+#Contacto-escondido form #boton-forma:hover {
   background: url("../img/patron-dark2.svg");
   background-size: cover;
 }
 
-* #Contacto-escondido form textarea {
+#Contacto-escondido form textarea {
   margin-top: 10px;
   margin-bottom: 20px;
   background-color: #212121;
@@ -611,7 +639,7 @@
   color: #FFF;
 }
 
-* #Contacto-escondido #cerranding {
+#Contacto-escondido #cerranding {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -622,7 +650,7 @@
   background-color: #212121;
   border: 1px solid #B08D57;
   color: #B08D57;
-  top: 5%;
+  top: 3%;
   right: 5%;
   position: absolute;
   font-size: 20px;
@@ -631,8 +659,42 @@
 }
 
 @media (orientation: landscape) and (min-width: 850px) {
-  * #Contacto-escondido #cerranding {
+  #Contacto-escondido #cerranding {
     display: block;
   }
+}
+
+footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background-color: #090909;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+footer .social {
+  padding: 20px 0 10px;
+  display: block;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+footer .social a img {
+  stroke: #B08D57;
+  width: 30px;
+}
+
+footer .text {
+  color: #B08D57;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+footer .text p a {
+  color: #B08D57;
 }
 /*# sourceMappingURL=main.css.map */
