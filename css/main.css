@@ -84,11 +84,14 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
+  top: 0;
 }
 
 @media (orientation: landscape) and (min-width: 850px) {
   * .fondito {
     max-height: 100vh;
+    -webkit-clip-path: polygon(0% 0%, 100% 1%, 100% 89%, 50% 100%, 0 89%);
+            clip-path: polygon(0% 0%, 100% 1%, 100% 89%, 50% 100%, 0 89%);
   }
 }
 
@@ -110,83 +113,6 @@
   * #largo {
     display: block;
   }
-}
-
-* #grande {
-  display: none;
-}
-
-* #hero {
-  position: relative;
-  display: block;
-  left: 5%;
-  background-color: transparent;
-  line-height: 1px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  text-align: left;
-}
-
-@media (orientation: landscape) and (min-width: 850px) {
-  * #hero {
-    position: absolute;
-    right: 5%;
-    bottom: 27%;
-    text-align: right;
-    left: auto;
-  }
-}
-
-* #hero h1 {
-  background-color: transparent;
-  color: #FFF;
-  font-size: 20px;
-  line-height: 17px;
-  padding: 0 5px;
-  margin-bottom: 3px;
-  letter-spacing: 2px;
-}
-
-@media (min-width: 400px) {
-  * #hero h1 {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 850px) {
-  * #hero h1 {
-    font-size: 36px;
-  }
-}
-
-* #hero h2 {
-  background-color: transparent;
-  color: #B08D57;
-  font-weight: lighter;
-  font-size: 17px;
-  margin-top: 3px;
-}
-
-@media (min-width: 400px) {
-  * #hero h2 {
-    font-size: 21px;
-  }
-}
-
-@media (min-width: 850px) {
-  * #hero h2 {
-    font-size: 33px;
-  }
-}
-
-* #hero p {
-  background-color: transparent;
-  color: #B08D57;
-  display: inline-block;
 }
 
 * #botonazo {
@@ -250,6 +176,79 @@
   }
 }
 
+* #hero {
+  position: relative;
+  display: block;
+  left: 5%;
+  background-color: transparent;
+  line-height: 1px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: left;
+}
+
+@media (orientation: landscape) and (min-width: 850px) {
+  * #hero {
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    text-align: right;
+    left: auto;
+  }
+}
+
+* #hero h1 {
+  background-color: transparent;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 17px;
+  padding: 0 5px;
+  margin-bottom: 3px;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 400px) {
+  * #hero h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 850px) {
+  * #hero h1 {
+    font-size: 36px;
+  }
+}
+
+* #hero h2 {
+  background-color: transparent;
+  color: #B08D57;
+  font-weight: lighter;
+  font-size: 17px;
+  margin-top: 3px;
+}
+
+@media (min-width: 400px) {
+  * #hero h2 {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 850px) {
+  * #hero h2 {
+    font-size: 33px;
+  }
+}
+
+* #hero p {
+  background-color: transparent;
+  color: #B08D57;
+  display: inline-block;
+}
+
 * #page {
   display: none;
 }
@@ -305,8 +304,13 @@
     width: 99.5%;
     margin-left: auto;
     position: absolute;
-    bottom: -75px;
+    bottom: 0px;
     z-index: 100;
+    background-image: url(../img/patron-dark2.svg);
+    background-size: cover;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
@@ -376,14 +380,60 @@
 
 #menu {
   display: block;
-  margin-top: 60px;
-  background-color: transparent !important;
+  margin-top: 0px;
 }
 
 @media (orientation: landscape) and (min-width: 850px) {
   #menu {
-    position: absolute;
+    background-image: url(../img/patron-dark.svg);
+    background-size: cover;
+    position: relative;
     bottom: 20%;
+    height: 500px;
+  }
+}
+
+#menu #texto {
+  text-align: center;
+  padding-top: 20px;
+  line-height: 10px;
+}
+
+#menu #texto h3 {
+  font-size: 16px;
+  color: #FFF;
+}
+
+@media (min-width: 400px) {
+  #menu #texto h3 {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 850px) {
+  #menu #texto h3 {
+    font-size: 33px;
+  }
+}
+
+#menu #texto span {
+  color: #B08D57;
+}
+
+#menu #texto h4 {
+  font-size: 14px;
+  color: #B08D57;
+}
+
+@media (min-width: 400px) {
+  #menu #texto h4 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 850px) {
+  #menu #texto h4 {
+    font-size: 30px;
   }
 }
 
@@ -399,9 +449,15 @@
   line-height: 50px;
 }
 
-@media (min-width: 850px) {
+@media (orientation: landscape) and (min-width: 850px) {
   #menu ul {
-    background-color: transparent !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
@@ -412,12 +468,6 @@
   text-decoration: none;
   color: #FFF;
   font-size: 20px;
-}
-
-@media (min-width: 850px) {
-  #menu ul li {
-    background-color: transparent !important;
-  }
 }
 
 #menu ul li a {
@@ -433,10 +483,6 @@
 }
 
 #menu ul a:hover {
-  color: #B08D57;
-}
-
-#menu ul li:focus {
   color: #B08D57;
 }
 

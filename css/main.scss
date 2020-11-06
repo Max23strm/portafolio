@@ -41,6 +41,7 @@ $horizontal: landscape;
         max-width: 1920px;
         margin: 0 auto;
         background-color: $oscuro2;
+
         position: relative;
 
         @include escritorio {
@@ -113,13 +114,14 @@ $horizontal: landscape;
         margin-left: auto;
         margin-right: auto;
         max-width: 100%;
-
+        top: 0;
 
 
         @include horizontal {
 
             @include escritorio {
                 max-height: 100vh;
+                clip-path: polygon(0% 0%, 100% 1%, 100% 89%, 50% 100%, 0 89%);
 
 
             }
@@ -142,80 +144,6 @@ $horizontal: landscape;
             display: block;
         }
     }
-
-    #grande {
-        display: none;
-    }
-
-
-
-    #hero {
-        position: relative;
-        display: block;
-        left: 5%;
-        background-color: transparent;
-        line-height: 1px;
-        justify-content: center;
-        width: fit-content;
-        text-align: left;
-
-        @include horizontal {
-
-
-            @include escritorio {
-                position: absolute;
-                right: 5%;
-                bottom: 27%;
-                text-align: right;
-                left: auto;
-
-            }
-        }
-
-        h1 {
-            background-color: transparent;
-            color: $blanco;
-            font-size: 20px;
-            line-height: 17px;
-            padding: 0 5px;
-            margin-bottom: 3px;
-            letter-spacing: 2px;
-
-            @include panta {
-                font-size: 24px;
-            }
-
-            @include escritorio {
-                font-size: 36px
-            }
-
-        }
-
-        h2 {
-            background-color: transparent;
-            color: $primario;
-            font-weight: lighter;
-            font-size: 17px;
-            margin-top: 3px;
-
-            @include panta {
-                font-size: 21px;
-            }
-
-            @include escritorio {
-                font-size: 33px
-            }
-        }
-
-
-        p {
-            background-color: transparent;
-            color: $primario;
-            display: inline-block;
-        }
-
-    }
-
 
 
     #botonazo {
@@ -269,6 +197,79 @@ $horizontal: landscape;
     }
 
 
+    #hero {
+        position: relative;
+        display: block;
+        left: 5%;
+        background-color: transparent;
+        line-height: 1px;
+        justify-content: center;
+        width: fit-content;
+        text-align: left;
+
+        @include horizontal {
+
+
+            @include escritorio {
+                position: absolute;
+                right: 5%;
+                top: 35%;
+                text-align: right;
+                left: auto;
+
+            }
+        }
+
+        h1 {
+            background-color: transparent;
+            color: $blanco;
+            font-size: 20px;
+            line-height: 17px;
+            padding: 0 5px;
+            margin-bottom: 3px;
+            letter-spacing: 2px;
+
+            @include panta {
+                font-size: 24px;
+            }
+
+            @include escritorio {
+                font-size: 36px
+            }
+
+        }
+
+        h2 {
+            background-color: transparent;
+            color: $primario;
+            font-weight: lighter;
+            font-size: 17px;
+            margin-top: 3px;
+
+            @include panta {
+                font-size: 21px;
+            }
+
+            @include escritorio {
+                font-size: 33px
+            }
+        }
+
+
+        p {
+            background-color: transparent;
+            color: $primario;
+            display: inline-block;
+        }
+
+    }
+
+
+
+
+
+
+
 
     #page {
         display: none;
@@ -306,8 +307,11 @@ $horizontal: landscape;
             width: 99.5%;
             margin-left: auto;
             position: absolute;
-            bottom: -75px;
+            bottom: 0px;
             z-index: 100;
+            background-image: url(../img/patron-dark2.svg);
+            background-size: cover;
+            justify-content: space-evenly;
         }
 
         .ejemplo {
@@ -377,17 +381,58 @@ $horizontal: landscape;
 }
 
 
-
-
 #menu {
     display: block;
-    margin-top: 60px;
-    background-color: transparent !important;
+    margin-top: 0px;
+
 
     @include horizontal {
         @include escritorio {
-            position: absolute;
+            background-image: url(../img/patron-dark.svg);
+            background-size: cover;
+            position: relative;
             bottom: 20%;
+            height: 500px;
+        }
+
+
+    }
+
+    #texto {
+        text-align: center;
+        padding-top: 20px;
+        line-height: 10px;
+
+        h3 {
+            font-size: 16px;
+            color: $blanco;
+
+            @include panta {
+                font-size: 21px;
+            }
+
+            @include escritorio {
+                font-size: 33px;
+            }
+
+        }
+
+        span {
+            color: $primario;
+        }
+
+        h4 {
+            font-size: 14px;
+            color: $primario;
+
+            @include panta {
+                font-size: 18px;
+            }
+
+            @include escritorio {
+                font-size: 30px;
+
+            }
         }
     }
 
@@ -397,8 +442,11 @@ $horizontal: landscape;
         flex-direction: column;
         line-height: 50px;
 
-        @include escritorio {
-            background-color: transparent !important;
+        @include horizontal {
+            @include escritorio {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
         }
 
 
@@ -407,10 +455,6 @@ $horizontal: landscape;
             text-decoration: none;
             color: $blanco;
             font-size: 20px;
-
-            @include escritorio {
-                background-color: transparent !important;
-            }
 
             a {
 
@@ -429,9 +473,7 @@ $horizontal: landscape;
             color: $primario;
         }
 
-        li:focus {
-            color: $primario;
-        }
+
     }
 }
 
